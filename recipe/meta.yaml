@@ -11,15 +11,15 @@ source:
 
 build:
   number: 1
-  skip: True  # [win]
+  skip: True  # [win,py<36]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python
   run:
-    - python >=3.6
+    - python
     - pytest >=4.3,<6
     - pyyaml >=3,<6
     - jsonschema >=2,<4
