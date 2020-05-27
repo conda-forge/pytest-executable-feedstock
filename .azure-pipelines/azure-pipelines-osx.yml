@@ -8,14 +8,14 @@ jobs:
     vmImage: macOS-10.14
   strategy:
     matrix:
-      osx_python3.6:
-        CONFIG: osx_python3.6
+      osx_python3.6.____cpython:
+        CONFIG: osx_python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_python3.7:
-        CONFIG: osx_python3.7
+      osx_python3.7.____cpython:
+        CONFIG: osx_python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
-      osx_python3.8:
-        CONFIG: osx_python3.8
+      osx_python3.8.____cpython:
+        CONFIG: osx_python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
     maxParallel: 8
   timeoutInMinutes: 360
