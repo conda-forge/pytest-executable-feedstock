@@ -1,12 +1,12 @@
-{% set name = "pytest_executable" %}
+{% set name = "pytest-executable" %}
 {% set version = "0.5.0" %}
 
 package:
-  name: pytest-executable
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.zip
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_') }}/{{ name }}-{{ version }}.zip
   sha256: ca63890a5f9aa64834665f141d31301c3fd641187521dd466e045af1a7cd068b
 
 build:
