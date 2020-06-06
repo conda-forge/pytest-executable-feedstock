@@ -24,6 +24,7 @@ requirements:
     - pyyaml >=3,<6
     - jsonschema >=2,<4
     - jinja2 >=2.7,<3
+    - delta ==0.4.*
     - dataclasses
 
 test:
