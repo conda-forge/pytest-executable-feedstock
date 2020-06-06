@@ -42,8 +42,8 @@ about:
   license_family: APACHE
   license_file: LICENSE.txt
   summary: pytest plugin for testing executables
-  doc_url: https://github.com/CS-SI/pytest-executable
-  dev_url: https://pytest-executable.readthedocs.io
+  doc_url: https://pytest-executable.readthedocs.io
+  dev_url: https://github.com/CS-SI/pytest-executable
 
 extra:
   recipe-maintainers:
