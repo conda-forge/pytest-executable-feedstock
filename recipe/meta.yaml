@@ -24,14 +24,14 @@ requirements:
     - pyyaml >=3,<6
     - jsonschema >=2,<4
     - jinja2 >=2.7,<3
-    - delta ==0.4.*
+    - delta >=0.4,<0.5
     - dataclasses
 
 test:
   requires:
     - pip
   commands:
-    #- python -m pip check
+    - python -m pip check
     - pytest --traceconfig | grep pytest-executable-{{ version }}
   imports:
     - pytest_executable
