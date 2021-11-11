@@ -1,5 +1,5 @@
 {% set name = "pytest-executable" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_') }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8010f19286a210120b28316b1433a859f8b95287f23eb6c5715b43f19ef0e66a
+  sha256: 28050aacaabe1026b32ad3d5e3eeee265bbfb5cfc72cfcbb879a58f3d7266bd3
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
