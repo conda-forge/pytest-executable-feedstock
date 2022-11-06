@@ -1,5 +1,5 @@
 {% set name = "pytest-executable" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.4" %}
 
 package:
   name: {{ name }}
@@ -7,25 +7,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_') }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 28050aacaabe1026b32ad3d5e3eeee265bbfb5cfc72cfcbb879a58f3d7266bd3
+  sha256: 6058f735a23c24fbca1e8d80cf056ea751cbdf0c1aa5f850535db50beca4fcc2
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python  # [py>=36]
+    - python
   run:
-    - python  # [py>=36]
-    - dataclasses
-    - delta >=0.4,<0.5
-    - jinja2 >=2.7,<3.1
-    - jsonschema >=2,<4
-    - pytest >=4.3,<6.3
+    - python
+    - pytest >=4.3,<8
     - pyyaml >=3,<6.1
+    - jsonschema >=2,<5
+    - jinja2 >=2.7,<3.2
+    - delta >=0.4,<0.5
 
 test:
   requires:
