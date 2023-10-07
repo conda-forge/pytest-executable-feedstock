@@ -20,7 +20,7 @@ requirements:
     - python
   run:
     - python
-    - pytest >=4.3,<8
+    - pytest >=5,<8
     - pyyaml >=3,<6.1
     - jsonschema >=2,<5
     - jinja2 >=2.7,<3.2
