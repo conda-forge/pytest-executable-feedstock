@@ -6,20 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name.replace('-', '_') }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name.replace('-', '_') }}/{{ name }}-{{ version }}.tar.gz
   sha256: f61d428ed84c086e6fed14a9dc5a8bfd936c2d938ed525f52b4f80262a69804c
 
 build:
-  number: 1
-  skip: true  # [win]
+  number: 2
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
+    - setuptools
   run:
-    - python
+    - python >={{ python_min }}
     - pytest >=5,<8
     - pyyaml >=3,<6.1
     - jsonschema >=2,<5
@@ -29,6 +30,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - python -m pip check
   imports:
